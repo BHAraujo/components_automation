@@ -1,0 +1,16 @@
+{
+  "name": "sauce_automation",
+  "version": "1.0.0",
+  "description": "Automação do Fluxo de e-commerce do site https://www.saucedemo.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.2.0"
+  }
+}

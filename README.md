@@ -1,2 +1,2 @@
 # sauce_automation
-Automação do Fluxo de e-commerce do site https://www.saucedemo.com/
+Automação do Fluxo de e-commerce do site http://the-internet.herokuapp.com/

@@ -1,0 +1,4 @@
+{
+  "title": {"locator": "h1", "text": "Welcome to the-internet"},
+  "sub_title": {"locator": "h2", "text": "Available Examples"}
+}

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:run": "cypress run --config-file ./environment/hml_cypress.config.js",
-    "cypress:open": "cypress open --config-file ./environment/hml_cypress.config.js"
+    "cypress:open": "cypress open --config-file ./environment/hml_cypress.config.js",
+    "cypress:run:chrome": "cypress run --browser chrome --config-file ./environment/hml_cypress.config.js"  
   },
   "keywords": [],
   "author": "",

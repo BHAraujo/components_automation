@@ -1,0 +1,7 @@
+{
+    "title": {"locator": "h3", "text": "Add/Remove Elements"},
+    "btn_add_element": {"locator": "button"},
+    "btn_delete_dinamic": {"locator": ".added-manually"}
+}
+  
+  

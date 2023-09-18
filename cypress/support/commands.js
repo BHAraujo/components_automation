@@ -1,25 +1,24 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import home from '../fixtures/Home.json'
+import ab_testing from '../fixtures/ab_testing.json'
+import add_remove_elements from '../fixtures/add_remove_elements.json'
+
+
+Cypress.Commands.add('validateHome', () => {
+    cy.visit('/')
+      cy.fixture("home").as('home')
+      cy.fixture("ab_testing").as('ab_testing')
+      cy.fixture("add_remove_elements").as('add_remove_elements')
+
+      cy.get('@home').then(homeFixture => {
+
+        cy.get(home.title.locator).then(el => {
+          expect(el[0].outerText, 'Assert Title').equal(home.title.text)
+        })
+  
+        cy.get(home.sub_title.locator).then(el => {
+          expect(el[0].outerText, 'Assert Title').equal(home.sub_title.text)
+        })
+
+      })
+})
+

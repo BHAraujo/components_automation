@@ -1,0 +1,4 @@
+{
+  "title": {"locator": "h3", "text": "Checkboxes"},
+  "checkboxes": {"locator": "[type='checkbox']"}
+}

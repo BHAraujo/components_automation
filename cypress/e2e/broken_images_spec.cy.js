@@ -1,18 +1,20 @@
 /// <reference types="cypress"/>
 
+
 import broken_images from '../fixtures/broken_images.json'
 
 
 describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/', ()=>{
-    before(()=>{
-      cy.visit('/')
-      cy.fixture("broken_images").as('broken_images')
-    })
+  beforeEach(()=>{  
+    cy.validateHome()
+    cy.fixture("broken_images").as('broken_images')
+  })
+     
 
-  
     context('Dado o click no link Broken Images', ()=>{
   
       it('Então valido o carregamento das imagens', ()=>{
+        
         cy.get('@broken_images').then(broken_images => {
         
           cy.contains(broken_images.link).click()
@@ -27,8 +29,7 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
             expect(el[3].currentSrc,'Assert OK Image').equal(broken_images.images.index[2].image_three)
           })
 
-        })
-        
+        })        
 
     }) 
 

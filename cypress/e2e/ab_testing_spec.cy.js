@@ -1,18 +1,20 @@
 /// <reference types="cypress"/>
+import ab_testing from '../fixtures/ab_testing.json'
 
 
 describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/', ()=>{
-    before(()=>{
+    before(()=>{  
       cy.validateHome()
+      cy.fixture("ab_testing").as('ab_testing')
     })
 
     after(()=>{
       cy.visit('/')
     })
 
-    context('Dado o título da página Welcome to the-internet Available Examples', ()=>{
+    context('Dado o click no link A/B Testing', ()=>{
   
-      it('Quando clico no link A/B Testing e Válido a mensagem da página', ()=>{
+      it('Então válido a mensagem da página', ()=>{
        
     
       cy.get('@ab_testing').then(ab_testing => {

@@ -1,0 +1,20 @@
+{
+	"link": "Broken Images",
+	"title": {
+		"locator": "h3",
+		"text": "Broken Images"
+	},
+	"images": {
+		"locator": "img",
+		"index": [{
+				"image_one": "http://the-internet.herokuapp.com/asdf.jpg"
+			},
+			{
+				"image_two": "http://the-internet.herokuapp.com/hjkl.jpg"
+			},
+			{
+				"image_three": "http://the-internet.herokuapp.com/img/avatar-blank.jpg"
+			}
+		]
+	}
+}

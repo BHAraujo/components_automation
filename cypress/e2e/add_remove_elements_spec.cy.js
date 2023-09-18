@@ -1,11 +1,14 @@
 /// <reference types="cypress"/>
 
+import add_remove_elements from '../fixtures/add_remove_elements.json'
+
 
 // Todo:Passa url
-// Colocar essa chamada no command para validar a home
+
 describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/ com título the-internet Available Examples', ()=>{
     before(()=>{
         cy.validateHome()
+        cy.fixture("add_remove_elements").as('add_remove_elements')
       })
   
       after(()=>{
@@ -13,7 +16,7 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/ c
       })
 
     
-    context('Dado o acesso na página Add/Remove Elements', ()=>{
+    context('Dado o click no link Add/Remove Elements', ()=>{
         it('Então válido o botão add/element com 5 cliques e 3 cliques no button delete', ()=>{
             cy.contains('Add/Remove Elements').should('be.visible').click()
             

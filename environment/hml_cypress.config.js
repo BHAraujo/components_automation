@@ -8,6 +8,7 @@ module.exports = defineConfig({
     failOnStatusCode : false,
     defaultCommandTimeout: 4000,
     responseTimeout: 4000,
+    pageLoadTimeout: 4000, 
     reporter: 'cypress-mochawesome-reporter',
 
     reporterOptions: {

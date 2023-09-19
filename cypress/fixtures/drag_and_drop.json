@@ -1,0 +1,15 @@
+{
+	"title": {
+		"locator": "h3"
+	},
+	"div_headers": {
+		"locator": ".column > header"
+	},
+	"div_a": {
+		"locator": "#column-a"
+	},
+	"div_b": {
+		"locator": "#column-b"
+	}
+
+}

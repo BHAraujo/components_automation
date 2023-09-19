@@ -1,0 +1,4 @@
+{
+	"title": {"locator": "h3"},
+	"dropdown": {"locator": "#dropdown > option"}
+}

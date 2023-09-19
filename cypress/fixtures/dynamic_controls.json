@@ -1,0 +1,22 @@
+{
+	"title": {
+		"locator": "h4"
+	},
+	"checked_before_remove": {
+		"locator": "#checkbox > input"
+	},
+	"button_remove_add": {
+		"locator": "#checkbox-example > button"
+	},
+	"message_load": {
+		"locator": "#loading"
+	},
+	"message_success": {
+		"locator": "#message"
+	},
+	"checkbox_after_remove": {
+		"locator": "#checkbox"
+	}
+
+
+}

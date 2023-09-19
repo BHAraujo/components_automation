@@ -1,0 +1,6 @@
+{
+    "title": {"locator": "h3"},
+    "content": {"locator": ".large-2.columns > img"}
+
+}
+

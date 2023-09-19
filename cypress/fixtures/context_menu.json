@@ -1,0 +1,22 @@
+{
+	"title": {
+		"locator": "h3",
+		"text": "Context Menu"
+	},
+	"description": {
+		"locator": "p",
+		"texts": [{
+				"text1": "Context menu items are custom additions that appear in the right-click menu."
+			},
+			{
+				"text2": "Right-click in the box below to see one called 'the-internet'. When you click it, it will trigger a JavaScript alert."
+			}
+		]
+	},
+	"context_menu": {
+		"locator": "#hot-spot"
+	},
+	"msg_alert": {
+		"text": "You selected a context menu"
+	}
+}

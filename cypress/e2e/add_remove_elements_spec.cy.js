@@ -6,7 +6,7 @@ import add_remove_elements from '../fixtures/add_remove_elements.json'
 
 // Todo:Passa url
 
-describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/ com título the-internet Available Examples', ()=>{
+describe('Testar página Add/Remove Elements na url http://the-internet.herokuapp.com/ com título the-internet Available Examples', ()=>{
     beforeEach(()=>{  
         cy.validateHome()
         cy.fixture("add_remove_elements").as('add_remove_elements')

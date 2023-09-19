@@ -1,4 +1,4 @@
-import home from '../fixtures/Home.json'
+import home from '../fixtures/home.json'
 
 
 Cypress.Commands.add('validateHome', ()=>{
@@ -10,17 +10,15 @@ Cypress.Commands.add('validateHome', ()=>{
 
       cy.get(home.title.locator).then(el => {
 
-        expect(el[0].outerText, 'Assert Title').equal(home.title.text)
+        expect(el[0].innerText, 'Assert Title').equal(home.title.text)
       
-      })
+      })  
 
       cy.get(home.sub_title.locator).then(el => {
-
-        expect(el[0].outerText, 'Assert Title').equal(home.sub_title.text)
+      
+        expect(el[0].innerText, 'Assert Title').equal(home.sub_title.text)
       
       })
-
-      
 
     })
 })

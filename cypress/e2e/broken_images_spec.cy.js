@@ -4,7 +4,7 @@
 import broken_images from '../fixtures/broken_images.json'
 
 
-describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/', ()=>{
+describe('Testar página Broken Images na url http://the-internet.herokuapp.com/', ()=>{
   beforeEach(()=>{  
     cy.validateHome()
     cy.fixture("broken_images").as('broken_images')

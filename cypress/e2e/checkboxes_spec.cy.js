@@ -3,7 +3,7 @@
 import checkboxes from '../fixtures/checkboxes.json'
 
 
-describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/', ()=>{
+describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', ()=>{
       
     beforeEach(()=>{  
       cy.validateHome()

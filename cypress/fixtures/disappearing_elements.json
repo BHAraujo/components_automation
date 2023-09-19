@@ -1,0 +1,23 @@
+{
+	"links": [{
+			"locator_home": "Home"
+		}, {
+			"locator_about": "About",
+			"text": "h1"
+		},
+		{
+			"locator_contact_us": "Contact Us",
+			"text": "h1"
+		},
+		{
+			"locator_portfolio": "Portfolio",
+			"text": "h1"
+		},
+
+		{
+			"locator_gallery": "Gallery",
+			"text": "h1"
+		}
+	]
+
+}	

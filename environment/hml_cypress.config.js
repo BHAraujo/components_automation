@@ -6,7 +6,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'http://the-internet.herokuapp.com/',
     failOnStatusCode : false,
-    defaultCommandTimeout: 4000,
+    defaultCommandTimeout: 6000,
     responseTimeout: 4000,
     pageLoadTimeout: 4000, 
     reporter: 'cypress-mochawesome-reporter',

@@ -16,7 +16,21 @@
 	},
 	"checkbox_after_remove": {
 		"locator": "#checkbox"
+	},
+	"title_enable_disable": {
+		"locator": ".subheader"
+	},
+	"input_enable_disable": {
+		"locator": "#input-example > input"
+	},
+	"btn_enable_disable": {
+		"locator": "#input-example > button"
+	},
+	"p_loading": {
+		"locator": "#loading"
+	},
+	"p_message": {
+		"locator": "#message"
 	}
-
 
 }

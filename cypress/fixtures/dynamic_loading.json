@@ -1,0 +1,17 @@
+{
+	"title": {
+		"locator": ".example > h3"
+	},
+	"subtitle": {
+		"locator": ".example > h4"
+	},
+	"button_start": {
+		"locator": "#start > button"
+	},
+	"p_loading": {
+		"locator": "#loading"
+	},
+	"p_finish": {
+		"locator": "#finish"
+	}
+}

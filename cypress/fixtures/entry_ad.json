@@ -1,0 +1,21 @@
+{
+	"title_modal": {
+		"locator": ".modal-title",
+		"text": "\n      This is a modal window\n    "
+	},
+	"description_modal": {
+		"locator": ".modal-body > p",
+		"text": "It's commonly used to encourage a user to take an action (e.g., give their e-mail address to sign up for something or disable their ad blocker)."
+	},
+	"modal_close": {
+		"locator": "Close"
+	},
+	"title": {
+		"locator": ".example > h3",
+		"text": "Entry Ad"
+	},
+	"modal_description": {
+		"locator": ".modal-body > p",
+		"text": "It's commonly used to encourage a user to take an action (e.g., give their e-mail address to sign up for something or disable their ad blocker)."
+	}
+}

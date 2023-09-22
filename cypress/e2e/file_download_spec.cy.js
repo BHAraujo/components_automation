@@ -3,6 +3,8 @@
 // import file_download from '../fixtures/file_download.json'
 
 
+
+
 describe('Testar página FILE DOWNLOAD na url http://the-internet.herokuapp.com/', ()=>{
  
 beforeEach(()=>{  
@@ -46,9 +48,9 @@ beforeEach(()=>{
             expect(el[0].innerText).equal('File Downloader')
         })
 
-        cy.downloadFile('http://the-internet.herokuapp.com/download/eva-logo.png', '../../downloads', 'teste.png')
+        cy.downloadFile('http://the-internet.herokuapp.com/download/eva-logo.png', '../cypress/downloads', 'teste.png')
 
-        // cy.readFile('path/to/message.txt').should('eq', 'Hello World')
+        cy.readFile('./cypress/downloads/teste.png').should('be.to.exist')
 
      })
     })

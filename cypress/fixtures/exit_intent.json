@@ -1,0 +1,4 @@
+{
+    "title": {"locator": ".example > h3", "text": "Exit Intent"},
+    "description": {"locator": ".example > p", "text": "Mouse out of the viewport pane and see a modal window appear."}
+}

@@ -1,6 +1,6 @@
 const { defineConfig } = require('cypress')
 const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
-
+const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
 
 module.exports = defineConfig({
   e2e: {
@@ -21,11 +21,13 @@ module.exports = defineConfig({
 
   setupNodeEvents(on, config) {
   
-   require('cypress-mochawesome-reporter/plugin')(on);
-      
+    require('cypress-mochawesome-reporter/plugin')(on);
+    on('task', {downloadFile})
+   
    }
+   
 
-  },
+  }
 })
 
 

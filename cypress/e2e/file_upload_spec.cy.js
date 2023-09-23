@@ -22,7 +22,7 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
 
         cy.get(file_upload.title.locator).should('be.visible').then( el => {
         
-            expect(el[0].innerText).equal(file_upload.title.text)
+            expect(el[0].innerText, 'Assert Title').equal(file_upload.title.text)
         
         })
 
@@ -34,13 +34,13 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
 
         cy.get(file_upload.title_uploader.locator).should('be.visible').then( el => {
 
-            expect(el[0].innerText).equal(file_upload.title_uploader.text)
+            expect(el[0].innerText, 'Assert Input Upload').equal(file_upload.title_uploader.text)
         
         })
 
         cy.get(file_upload.p_uploader.locator).then( el => {
            
-            expect(el[0].innerText).equal(file)
+            expect(el[0].innerText, 'Assert Name File Uploaded').equal(file)
             
         })
 

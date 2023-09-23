@@ -1,0 +1,3 @@
+{
+    "title": {"locator": ".example > h3", "text": "Floating Menu"}
+}

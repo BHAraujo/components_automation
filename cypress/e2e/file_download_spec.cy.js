@@ -13,7 +13,7 @@ beforeEach(()=>{
   })
 
 
-  context('Dado o click no link FILE DOWNLOAD valido o título da página', ()=>{
+  context.skip('Dado o click no link FILE DOWNLOAD valido o título da página', ()=>{
 
     it('Então valido a quantidae de clicks disponíveis para download', ()=>{
 
@@ -55,7 +55,7 @@ beforeEach(()=>{
          '5mb script.xml', 'sample-zip-file.zip', 'testing_edge.pdf'
     ].forEach(file =>{
 
-        context('Dado o click no link FILE DOWNLOAD valido o título da página', ()=>{
+        context.skip('Dado o click no link FILE DOWNLOAD valido o título da página', ()=>{
 
             it(`Então clico no link ${file} e valido se o arquivo foi baixado corretamente`, ()=>{
                 

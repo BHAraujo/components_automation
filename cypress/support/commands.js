@@ -1,3 +1,4 @@
+import 'cypress-file-upload';
 import home from '../fixtures/home.json'
 
 

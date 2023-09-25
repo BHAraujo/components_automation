@@ -1,0 +1,32 @@
+{
+    "title": {
+        "locator": ".example > h2",
+        "text": "Login Page"
+    },
+    "input_username": {
+        "locator": "#username",
+        "type": "tomsmith"
+    },
+    "input_password": {
+        "locator": "#password",
+        "type": "SuperSecretPassword!"
+    },
+    "btn_login": {
+        "locator": ".radius"
+    },
+    "msg_logged": {
+        "locator": "#flash",
+        "text": " You logged into a secure area!\n×"
+    },
+    "title_logged": {
+        "locator": ".example > h2",
+        "text": "Secure Area"
+    },
+    "subtitle_logged": {
+        "locator": ".subheader",
+        "text": "Welcome to the Secure Area. When you are done click logout below."
+    },
+    "btn_logout": {
+        "locator": ".button.secondary.radius"
+    }
+}

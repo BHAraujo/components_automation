@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-25T17:46:08.223Z",
+    "end": "2023-09-25T17:46:13.713Z",
+    "duration": 5490,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d3a25634-959b-4f7f-be11-a52851598008",
+      "title": "",
+      "fullFile": "cypress\\e2e\\add_remove_elements_spec.cy.js",
+      "file": "cypress\\e2e\\add_remove_elements_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b1215862-6d90-47dc-aa18-95fe224d0511",
+          "title": "Testar página Add/Remove Elements na url http://the-internet.herokuapp.com/ com título the-internet Available Examples",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "68d1f981-04e0-4006-95a5-560a9daf2f13",
+              "title": "Dado o click no link Add/Remove Elements",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Então válido o botão add/element com 5 cliques e 3 cliques no button delete",
+                  "fullTitle": "Testar página Add/Remove Elements na url http://the-internet.herokuapp.com/ com título the-internet Available Examples Dado o click no link Add/Remove Elements Então válido o botão add/element com 5 cliques e 3 cliques no button delete",
+                  "timedOut": null,
+                  "duration": 5395,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('Add/Remove Elements').should('be.visible').click();\ncy.get('@add_remove_elements').then(add_remove_elements => {\n  cy.get(add_remove_elements.title.locator).then(el => {\n    expect(el[0].innerHTML, 'Assert Title').equal(add_remove_elements.title.text);\n  });\n  cy.get(add_remove_elements.btn_add_element.locator).then(el => {\n    for (let x = 0; x < 5; x++) {\n      cy.wrap(el).click();\n    }\n  });\n  cy.get(add_remove_elements.btn_delete_dinamic.locator).then(el => {\n    for (let x = 0; x < 3; x++) {\n      cy.wrap(el[x]).click();\n    }\n  });\n  cy.get(add_remove_elements.btn_delete_dinamic.locator).then(el => {\n    expect(el.length, 'Assert amount Button').equal(2);\n  });\n});",
+                  "err": {},
+                  "uuid": "35c42e40-619c-4699-9d74-ad8c86ac135e",
+                  "parentUUID": "68d1f981-04e0-4006-95a5-560a9daf2f13",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "35c42e40-619c-4699-9d74-ad8c86ac135e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5395,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Api Automation",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

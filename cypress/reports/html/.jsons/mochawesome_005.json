@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-25T17:46:39.170Z",
+    "end": "2023-09-25T17:46:43.502Z",
+    "duration": 4332,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "30688eb7-d880-4030-85a0-9dda6cf8650b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\context_menu_spec.cy.js",
+      "file": "cypress\\e2e\\context_menu_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a716ff26-368a-4c39-bc10-0551312931ab",
+          "title": "Testar página Context Menu na url http://the-internet.herokuapp.com/",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "b86abe51-f91f-4cac-bf5c-758ada07aa32",
+              "title": "Dado o click no link Context Menu",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Então clico no Context Menu e o valido mensagem do alert",
+                  "fullTitle": "Testar página Context Menu na url http://the-internet.herokuapp.com/ Dado o click no link Context Menu Então clico no Context Menu e o valido mensagem do alert",
+                  "timedOut": null,
+                  "duration": 4271,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('@context_menu').then(context_menu => {\n  cy.contains('Context Menu').should('be.visible').click();\n  cy.get(context_menu.title.locator).then(el => {\n    expect(el[0].innerText, 'Assert Title').equal(context_menu.title.text);\n  });\n  cy.get(context_menu.description.locator).then(el => {\n    expect(el[0].innerText, 'Assert Description').equal(context_menu.description.texts[0].text1);\n    expect(el[1].innerText, 'Assert Description').equal(context_menu.description.texts[1].text2);\n  });\n  cy.get(context_menu.context_menu.locator, {\n    force: true,\n    position: 'top',\n    waitForAnimations: true\n  }).rightclick();\n  cy.on('window:alert', msg => {\n    expect(msg, 'Assert menssage ALERT').equal(context_menu.msg_alert.text);\n  });\n});",
+                  "err": {
+                    "message": "CypressError: Timed out after waiting `4000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `4000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `hml_cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Testar página Context Menu ...`",
+                    "estack": "CypressError: Timed out after waiting `4000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `4000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `hml_cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Testar página Context Menu ...`\n    at timedOutWaitingForPageLoad (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:130009:64)\n    at <unknown> (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:130983:16)\n    at tryCatcher (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///../cypress/support/commands.js:6:7)",
+                    "diff": null
+                  },
+                  "uuid": "07ccaf92-819d-4960-ab87-155d2fed5673",
+                  "parentUUID": "b86abe51-f91f-4cac-bf5c-758ada07aa32",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "07ccaf92-819d-4960-ab87-155d2fed5673"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 4271,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Api Automation",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

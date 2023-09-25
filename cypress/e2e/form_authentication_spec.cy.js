@@ -18,9 +18,12 @@ describe('Testar página Form Authentication na url http://the-internet.herokuap
           
           cy.get('@form_authentication').then( form_authentication => {
   
-            cy.contains('Form Authentication').should('be.visible').click()
+            cy.contains('Form Authentication')
+            .should('be.visible')
+            .click()
   
-          cy.get(form_authentication.title.locator).should('be.visible').then( el => {
+          cy.get(form_authentication.title.locator).
+          should('be.visible').then( el => {
   
             expect(el[0].innerText).equal(form_authentication.title.text)
           

@@ -1,0 +1,12 @@
+{
+	"title": {
+		"locator": ".example > h3",
+		"text": "Horizontal Slider"
+	},
+	"slider": {
+		"locator": ".sliderContainer > input"
+	},
+	"p_slider": {
+		"locator": "#range"
+	}
+}

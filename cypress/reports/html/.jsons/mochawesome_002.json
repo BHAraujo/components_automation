@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-25T17:46:16.007Z",
+    "end": "2023-09-25T17:46:23.478Z",
+    "duration": 7471,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d39ffa43-8219-4733-9ce7-ae1907b0a9db",
+      "title": "",
+      "fullFile": "cypress\\e2e\\basic_auth_spec.cy.js",
+      "file": "cypress\\e2e\\basic_auth_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c29d1af-f43b-49c6-bdf5-578a77c4b6d0",
+          "title": "Testar página Basic Auth na url http://the-internet.herokuapp.com/",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a00fda6b-3756-49a3-acc1-c9d4686ed490",
+              "title": "Dado o click no link Basic Auth",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando insiro as credenciais admin/admin e válido o texto da página",
+                  "fullTitle": "Testar página Basic Auth na url http://the-internet.herokuapp.com/ Dado o click no link Basic Auth Quando insiro as credenciais admin/admin e válido o texto da página",
+                  "timedOut": null,
+                  "duration": 4255,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(_basic_auth.default.description.locator).then(el => {\n  expect(el[0].outerText, 'Assert Description').equal(_basic_auth.default.description.text);\n});",
+                  "err": {
+                    "message": "CypressError: Timed out after waiting `4000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `4000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `hml_cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Testar página Basic Auth na...`",
+                    "estack": "CypressError: Timed out after waiting `4000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `4000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `hml_cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Testar página Basic Auth na...`\n    at timedOutWaitingForPageLoad (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:130009:64)\n    at <unknown> (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:130983:16)\n    at tryCatcher (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///../cypress/e2e/basic_auth_spec.cy.js:8:9)",
+                    "diff": null
+                  },
+                  "uuid": "86860de9-4f1a-4e75-a320-2426faa3d1b7",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "86860de9-4f1a-4e75-a320-2426faa3d1b7"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 4255,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Api Automation",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

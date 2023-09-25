@@ -5,11 +5,13 @@
     },
     "input_username": {
         "locator": "#username",
-        "type": "tomsmith"
+        "type": "tomsmith",
+        "type_invalid": "domsmith"
     },
     "input_password": {
         "locator": "#password",
-        "type": "SuperSecretPassword!"
+        "type": "SuperSecretPassword!",
+        "type_invalid": "SuperSecretPassword?"
     },
     "btn_login": {
         "locator": ".radius"
@@ -28,5 +30,6 @@
     },
     "btn_logout": {
         "locator": ".button.secondary.radius"
-    }
+    },
+    "message_error_login": {"locator": "#flash", "text": " Your username is invalid!\n×"}
 }

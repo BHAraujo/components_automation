@@ -25,7 +25,7 @@ describe('Testar página Floating Menu na url http://the-internet.herokuapp.com/
             
                     cy.get(floating_menu.title.locator).should('be.visible').then( el => {
                    
-                        expect(el[0].innerText).equal(floating_menu.title.text)
+                        expect(el[0].innerText, 'Assert Title').equal(floating_menu.title.text)
                    
                     })
     
@@ -35,16 +35,11 @@ describe('Testar página Floating Menu na url http://the-internet.herokuapp.com/
     
                         cy.url().then(el => {
                             
-                            expect(el).equal(Cypress.config().baseUrl.concat('floating_menu#' + menu))
+                            expect(el, 'Assert Url').equal(Cypress.config().baseUrl.concat('floating_menu#' + menu))
                         })
-
                     })
-  
                   })
-            })
-
-          
-        })
-   
+            })          
+        })  
     })
 })

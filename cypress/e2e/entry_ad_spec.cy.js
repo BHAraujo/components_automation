@@ -18,13 +18,8 @@ beforeEach(()=>{
            
                 cy.get('@entry_ad').then( entry_ad => {
 
-                cy.contains('Entry Ad').should('be.visible').click()
-                
-                cy.get(entry_ad.title_modal.locator).then( el => {
-
-                    expect(el[0].innerText, 'Assert title Modal').equal(entry_ad.title_modal.text)
-                
-                })
+                cy.assertPage(entry_ad.link.locator, entry_ad.path_url.url,
+                entry_ad.title_modal.locator, entry_ad.title_modal.text)
 
                 cy.get(entry_ad.description_modal.locator).then( el => {
                     expect(el[0].innerText, 'Assert description Modal').equal(entry_ad.description_modal.text)
@@ -35,8 +30,7 @@ beforeEach(()=>{
 
     })
 
-       
-
+    
 
     context('Dado o click no link Entry AD validar link CLICK HERE', ()=>{
             
@@ -44,21 +38,8 @@ beforeEach(()=>{
               
             cy.get('@entry_ad').then( entry_ad => {
  
-            cy.contains('Entry Ad').should('be.visible').click()
-            
-            cy.get(entry_ad.title_modal.locator).then( el => {
-
-                expect(el[0].innerText, 'Assert title Modal').equal(entry_ad.title_modal.text)
-            
-            })
-
-            cy.contains('Close').should('be.visible').click()
-
-            cy.get(entry_ad.title.locator).then( el => {
-
-                expect(el[0].innerText, 'Assert title Entry Ad').equal(entry_ad.title.text)
-            
-            })
+            cy.assertPage(entry_ad.link.locator, entry_ad.path_url.url,
+            entry_ad.title_modal.locator, entry_ad.title_modal.text)
 
             cy.contains('click here').should('be.visible').click()
 

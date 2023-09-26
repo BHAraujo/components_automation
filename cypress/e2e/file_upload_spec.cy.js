@@ -11,20 +11,14 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
       cy.fixture("file_upload").as('file_upload')
     })
 
-
     context('Dado o click no File Upload devo ser redirecionado para página', ()=>{
   
       it('Então clico no botão escolher arquivo e clico no botão upload', ()=>{
 
         cy.get('@file_upload').then( file_upload => {
 
-            cy.contains('File Upload').should('be.visible').click()
-
-        cy.get(file_upload.title.locator).should('be.visible').then( el => {
-        
-            expect(el[0].innerText, 'Assert Title').equal(file_upload.title.text)
-        
-        })
+        cy.assertPage(file_upload.link.locator, file_upload.path_url.url,
+        file_upload.title.locator, file_upload.title.text)
 
         const file = 'file_upload.json'
 

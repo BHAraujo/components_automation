@@ -3,5 +3,7 @@
     "input_upload": {"locator": "#file-upload"},
     "btn_submit": {"locator": "#file-submit"},
     "title_uploader": {"locator": ".example > h3", "text": "File Uploaded!"},
-    "p_uploader": {"locator": "#uploaded-files"} 
+    "p_uploader": {"locator": "#uploaded-files"},
+    "link": {"locator": "File Upload"},
+    "path_url": {"url": "upload"}
 }

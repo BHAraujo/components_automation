@@ -17,5 +17,8 @@
 	"modal_description": {
 		"locator": ".modal-body > p",
 		"text": "It's commonly used to encourage a user to take an action (e.g., give their e-mail address to sign up for something or disable their ad blocker)."
-	}
+	},
+	"link": {"locator": "Entry Ad"},
+	"path_url": {"url": "entry_ad"}
+
 }

@@ -17,12 +17,10 @@ beforeEach(()=>{
         
           cy.get('@drag_and_drop').then( drag_and_drop => {
 
-            cy.contains('Drag and Drop').should('be.visible').click()
-            cy.get(drag_and_drop.title.locator).then( el => {
-              expect(el[0].innerText, 'Assert Title').equal('Drag and Drop')
-            })
+            cy.assertPage(drag_and_drop.link.locator, drag_and_drop.path_url.url,
+            drag_and_drop.title.locator, drag_and_drop.title.text)
   
-            
+              
             cy.get(drag_and_drop.div_headers.locator).then( el => {
               expect(el[0].innerText, 'Assert Position compoment A').equal('A')
             })

@@ -19,13 +19,8 @@ beforeEach(()=>{
 
         cy.get('@file_download').then( file_download => {
 
-            cy.contains('File Download').should('be.visible').click()
-
-        cy.get(file_download.title.locator).should('be.visible').then( el => {
-
-            expect(el[0].innerText).equal(file_download.title.text)
-
-        })
+        cy.assertPage(file_download.link.locator, file_download.path_url.url,
+        file_download.title.locator, file_download.title_modal.text)
 
         cy.get(file_download.links.locator).then( el => {
   
@@ -61,22 +56,18 @@ beforeEach(()=>{
                 
              cy.get('@file_download').then( file_download => {
                
-                cy.contains('File Download').should('be.visible').click()
-        
-                cy.get(file_download.title.locator).should('be.visible').then( el => {
-        
-                    expect(el[0].innerText).equal(file_download.title.text)
-        
-                })
-        
-                cy.downloadFile('http://the-internet.herokuapp.com/download/'+ file, '../cypress/downloads', file).then(() =>{
-                    cy.readFile('./cypress/downloads/'+file).should('be.to.exist')
-                })
+
+            cy.assertPage(file_download.link.locator, file_download.path_url.url,
+            file_download.title.locator, file_download.title_modal.text)
+
+            cy.downloadFile('http://the-internet.herokuapp.com/download/'+ file, '../cypress/downloads', file).then(() =>{
+                cy.readFile('./cypress/downloads/'+file).should('be.to.exist')
+             })
              })   
             
-            })
         })
     })
+})
 
 })
 

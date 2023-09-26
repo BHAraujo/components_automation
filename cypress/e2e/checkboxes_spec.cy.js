@@ -17,11 +17,8 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
          
         cy.get('@checkboxes').then(checkboxes => {
 
-          cy.contains('Checkboxes').should('be.visible').click()
-
-          cy.get(checkboxes.title.locator).then(el=>{
-            expect(el[0].innerText).equal('Checkboxes')
-          })
+          cy.assertPage(checkboxes.link.locator, checkboxes.path_url.url,
+          checkboxes.title.locator, checkboxes.title.text)
 
           cy.get(checkboxes.checkboxes.locator).then( el => {
             expect(el[0].checked).equal(false)
@@ -42,11 +39,8 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
       it('Então altero o atributo checked para false dos dois checkboxes', ()=>{
         cy.get('@checkboxes').then(checkboxes => {
 
-          cy.contains('Checkboxes').click()
-
-          cy.get(checkboxes.title.locator).then(el=>{
-            expect(el[0].innerText).equal('Checkboxes')
-          })
+          cy.assertPage('Checkboxes', 'checkboxes',
+          checkboxes.title.locator, 'Checkboxes')
             
           cy.get(checkboxes.checkboxes.locator).then( el => {
             expect(el[0].checked).equal(false)

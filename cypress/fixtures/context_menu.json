@@ -18,5 +18,7 @@
 	},
 	"msg_alert": {
 		"text": "You selected a context menu"
-	}
+	},
+	"link": {"locator": "Context"},
+	"path_url": {"url": "context_menu"}
 }

@@ -1,4 +1,6 @@
 {
     "title": {"locator": ".example > h3", "text": "File Downloader"},
-    "links": {"locator": ".example > a"} 
+    "links": {"locator": ".example > a"},
+    "link": {"locator": "File Download"},
+    "path_url": {"url": "download"}
 }

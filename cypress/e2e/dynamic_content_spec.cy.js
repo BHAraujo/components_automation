@@ -19,13 +19,9 @@ beforeEach(()=>{
 
         cy.get('@dynamic_content').then( dynamic_content => {
 
-          cy.contains('Dynamic Content').should('be.visible').click()
+          cy.assertPage(dynamic_content.link.locator, dynamic_content.path_url.url,
+          dynamic_content.title.locator, dynamic_content.title.text)
 
-        cy.get(dynamic_content.title.locator).should('be.visible').then( el => {
-
-          expect(el[0].innerText, 'Assert Title').equal('Dynamic Content')
-
-        })
 
         cy.get(dynamic_content.content.locator).then( el => {
 

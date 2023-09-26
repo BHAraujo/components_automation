@@ -24,13 +24,16 @@ describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp
                      
                               cy.get('@horizontal_slider').then( horizontal_slider => {
 
-                                cy.contains('Horizontal Slider').should('be.visible').click().then( ()=> {
-                                    cy.url().then( url => {
+                                cy.assertPage(horizontal_slider.link.locator, horizontal_slider.path_url.url,
+                                    horizontal_slider.title.locator,horizontal_slider.title.text)
+                          
+                                // cy.contains(horizontal_slider.link.locator).should('be.visible').click().then( ()=> {
+                                //     cy.url().then( url => {
             
-                                        expect(url).equal(Cypress.config().baseUrl.concat('horizontal_slider'))
+                                //         expect(url).equal(Cypress.config().baseUrl.concat('horizontal_slider'))
                                         
-                                    })
-                                })
+                                //     })
+                                // })
             
                                 cy.get(horizontal_slider.title.locator).should('be.visible').then( el => {
                                     expect(el[0].innerText).equal(horizontal_slider.title.text)

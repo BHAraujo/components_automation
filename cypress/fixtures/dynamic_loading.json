@@ -1,6 +1,6 @@
 {
 	"title": {
-		"locator": ".example > h3"
+		"locator": ".example > h3", "text": "Dynamically Loaded Page Elements"
 	},
 	"subtitle": {
 		"locator": ".example > h4"
@@ -13,5 +13,7 @@
 	},
 	"p_finish": {
 		"locator": "#finish"
-	}
+	},
+	"link": {"locator": "Dynamic Loading"},
+	"path_url": {"url": "dynamic_loading"}
 }

@@ -1,4 +1,7 @@
 {
-	"title": {"locator": "h3"},
-	"dropdown": {"locator": "#dropdown > option"}
+	"title": {"locator": "h3", "text": "Dropdown List"},
+	"dropdown": {"locator": "#dropdown > option"},
+	"link": {"locator": "Dropdown"},
+	"path_url": {"url": "dropdown"}
+
 }

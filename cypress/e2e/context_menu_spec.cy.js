@@ -17,12 +17,10 @@ describe('Testar página Context Menu na url http://the-internet.herokuapp.com/'
 
         cy.get('@context_menu').then( context_menu => {
 
-          cy.contains('Context Menu').should('be.visible').click()
-
-          cy.get(context_menu.title.locator).then(el => {
-            expect(el[0].innerText, 'Assert Title').equal(context_menu.title.text)
-          })
-
+          cy.assertPage(context_menu.link.locator, context_menu.path_url.url,
+          context_menu.title.locator, context_menu.title.text)
+            
+          
           cy.get(context_menu.description.locator).then( el => {
 
             expect(el[0].innerText, 'Assert Description').equal(context_menu.description.texts[0].text1)

@@ -1,6 +1,8 @@
 {
-    "title": {"locator": "h3"},
-    "content": {"locator": ".large-2.columns > img"}
+    "title": {"locator": "h3", "text": "Dynamic Content"},
+    "content": {"locator": ".large-2.columns > img"},
+    "link": {"locator": "Dynamic Content"},
+    "path_url": {"url": "dynamic_content"}
 
 }
 

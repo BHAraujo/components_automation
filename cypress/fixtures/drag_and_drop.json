@@ -1,6 +1,6 @@
 {
 	"title": {
-		"locator": "h3"
+		"locator": "h3", "text": "Drag and Drop"
 	},
 	"div_headers": {
 		"locator": ".column > header"
@@ -10,6 +10,8 @@
 	},
 	"div_b": {
 		"locator": "#column-b"
-	}
+	},
+	"link": {"locator": "Drag and Drop"},
+	"path_url": {"url": "drag_and_drop"}
 
 }

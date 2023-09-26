@@ -15,14 +15,12 @@ describe('Testar página Add/Remove Elements na url http://the-internet.herokuap
     
     context('Dado o click no link Add/Remove Elements', ()=>{
         it('Então válido o botão add/element com 5 cliques e 3 cliques no button delete', ()=>{
-            cy.contains('Add/Remove Elements').should('be.visible').click()
             
             cy.get('@add_remove_elements').then( add_remove_elements => {
-
-                cy.get(add_remove_elements.title.locator).then( el => {
-                    expect(el[0].innerHTML, 'Assert Title',).equal(add_remove_elements.title.text)
-                })
-    
+                
+                cy.assertPage(add_remove_elements.link.locator, add_remove_elements.path_url.url,
+                add_remove_elements.title.locator,add_remove_elements.title.text)
+      
                 cy.get(add_remove_elements.btn_add_element.locator).then( el => {
                     for( let x = 0; x < 5; x++){
     

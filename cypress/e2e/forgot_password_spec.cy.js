@@ -20,17 +20,13 @@ describe('Testar página Forgot Password na url http://the-internet.herokuapp.co
 
             cy.get('@forgot_password').then( forgot_password => {
 
-                cy.contains('Forgot Password').should('be.visible').click()
-
-            cy.get(forgot_password.title.locator).should('be.visible').then( el => {
-                
-                expect(el[0].innerText, 'Assert Title').equal(forgot_password.title.text)
-
-                })
+            
+            cy.assertPage(forgot_password.link.locator, forgot_password.path_url.url,
+            forgot_password.title.locator, forgot_password.title.text)
 
             cy.get(forgot_password.input_email.locator).type(forgot_password.input_email.type)
 
-            cy.get('#form_submit').click()
+            cy.get(forgot_password.btn_submit.locator).click()
             
             cy.get(forgot_password.h1_not_found.locator).should('be.visible').then( el => {
 

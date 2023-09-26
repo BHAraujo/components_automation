@@ -16,12 +16,10 @@ describe('Testar página Broken Images na url http://the-internet.herokuapp.com/
       it('Então valido o carregamento das imagens', ()=>{
         
         cy.get('@broken_images').then(broken_images => {
+
+          cy.assertPage(broken_images.link, broken_images.path_url.url,
+          broken_images.title.locator,broken_images.title.text)
         
-          cy.contains(broken_images.link).click()
-       
-          cy.get(broken_images.title.locator).then( el => {
-            expect(el[0].innerText, 'Assert Title').equal(broken_images.title.text)
-          })
   
           cy.get(broken_images.images.locator).then( el => {
             expect(el[1].currentSrc,'Assert Broken HREF Image').equal(broken_images.images.index[0].image_one)

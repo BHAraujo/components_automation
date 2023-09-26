@@ -17,18 +17,10 @@ describe('Testar página Form Authentication na url http://the-internet.herokuap
         it('Então clico no botão Login valido a mensagens exibida e clico em logout', ()=>{
           
           cy.get('@form_authentication').then( form_authentication => {
-  
-            cy.contains('Form Authentication')
-            .should('be.visible')
-            .click()
-  
-          cy.get(form_authentication.title.locator).
-          should('be.visible').then( el => {
-  
-            expect(el[0].innerText).equal(form_authentication.title.text)
-          
-          })
-  
+
+          cy.assertPage(form_authentication.link.locator, form_authentication.path_url.url,
+          form_authentication.title.locator, form_authentication.title.text)
+    
           cy.get(form_authentication.input_username.locator)
           .should('be.visible')
           .type(form_authentication.input_username.type)
@@ -92,16 +84,10 @@ describe('Testar página Form Authentication na url http://the-internet.herokuap
           
           cy.get('@form_authentication')
           .then( form_authentication => {
-  
-            cy.contains('Form Authentication').should('be.visible').click()
-  
-          cy.get(form_authentication.title.locator)
-          .should('be.visible')
-          .then( el => {
-  
-            expect(el[0].innerText).equal(form_authentication.title.text)
-          
-          })
+
+          cy.assertPage(form_authentication.link.locator, form_authentication.path_url.url,
+          form_authentication.title.locator, form_authentication.title.text)
+
   
           cy.get(form_authentication.input_username.locator)
           .should('be.visible')

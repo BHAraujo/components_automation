@@ -15,19 +15,19 @@ beforeEach(()=>{
   
       it('Então não deve estar selecionao nenhuma opção', ()=>{
 
-        cy.contains('Dropdown').should('be.visible').click()
-        
-        cy.get(dropdown.title.locator).then( el => {
+        cy.get('@dropdown').then( dropdown => {
 
-          expect(el[0].innerText, 'Assert Title').equal('Dropdown List')
-        
-        }) 
-        
+        cy.assertPage(dropdown.link.locator, dropdown.path_url.url,
+        dropdown.title.locator, dropdown.title.text)
+    
         cy.get(dropdown.dropdown.locator).then( el => {
 
           expect(el[0].innerText, 'Assert default options').equal('Please select an option')
         
         })
+
+        })
+        
     }) 
   })
 
@@ -41,14 +41,11 @@ beforeEach(()=>{
     obj_dropdown.forEach((result)=>{
 
       it(`Então seleciono a opção ${result.value}`, ()=>{
-          console.log(result.index)
-        cy.contains('Dropdown').should('be.visible').click()
-        
-        cy.get(dropdown.title.locator).then( el => {
-  
-          expect(el[0].innerText, 'Assert Title').equal('Dropdown List')
-        
-        }) 
+          
+        cy.get('@dropdown').then( dropdown => {
+
+        cy.assertPage(dropdown.link.locator, dropdown.path_url.url,
+        dropdown.title.locator, dropdown.title.text)
         
         cy.get(dropdown.dropdown.locator).then( el => {
   
@@ -64,3 +61,6 @@ beforeEach(()=>{
    
   })
 })
+})
+
+

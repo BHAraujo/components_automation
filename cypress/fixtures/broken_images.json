@@ -16,5 +16,6 @@
 				"image_three": "http://the-internet.herokuapp.com/img/avatar-blank.jpg"
 			}
 		]
-	}
+	},
+	"path_url": {"url": "broken_images"}
 }

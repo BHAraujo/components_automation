@@ -1,4 +1,6 @@
 {
   "title": {"locator": "h3", "text": "Checkboxes"},
-  "checkboxes": {"locator": "[type='checkbox']"}
+  "checkboxes": {"locator": "[type='checkbox']"},
+  "link": {"locator": "Checkboxes"},
+  "path_url":{"url": "checkboxes"}
 }

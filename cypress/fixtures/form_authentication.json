@@ -31,5 +31,7 @@
     "btn_logout": {
         "locator": ".button.secondary.radius"
     },
-    "message_error_login": {"locator": "#flash", "text": " Your username is invalid!\n×"}
+    "message_error_login": {"locator": "#flash", "text": " Your username is invalid!\n×"},
+    "link": {"locator": "Form Authentication"},
+    "path_url": {"url": "login"}
 }

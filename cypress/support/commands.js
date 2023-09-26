@@ -35,3 +35,17 @@ Cypress.Commands.add('downloadFile', (url, directory, fileName) => {
     })
   })
 })
+
+Cypress.Commands.add('assertPage', (link_name, path_url, locator_title, title)=> {
+
+  cy.contains(link_name).should('be.visible').click()  
+
+            cy.url().then( url => {
+
+                expect(url).equal(Cypress.config().baseUrl.concat(path_url))
+
+                cy.get(locator_title).then( (el)=>{
+                    expect(el[0].innerText).equal(title)
+                })
+            })
+})

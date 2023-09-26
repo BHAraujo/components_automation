@@ -24,14 +24,9 @@ beforeEach(()=>{
         it('Então clico no botão START e valido a mensagem exibida HELLO WORLD!', ()=>{
 
           cy.get('@dynamic_loading').then( dynamic_loading => { 
-          
-            cy.contains('Dynamic Loading').should('be.visible').click()
 
-            cy.get(dynamic_loading.title.locator).then( el => {
-
-              expect(el[0].outerText, 'Assert Title').equal('Dynamically Loaded Page Elements')
-
-            })
+            cy.assertPage(dynamic_loading.link.locator, dynamic_loading.path_url.url,
+            dynamic_loading.title.locator, dynamic_loading.title.text)
 
             cy.contains(result.link).click()
 

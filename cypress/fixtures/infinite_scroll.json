@@ -1,0 +1,13 @@
+{
+	"link": {
+		"locator": "Infinite Scroll"
+	},
+	"title": {
+		"locator": ".example > h3",
+		"text": "Infinite Scroll"
+	},
+	"div_dynamic": {
+		"locator": ".jscroll-added"
+	},
+    "path_url": {"locator": "infinite_scroll"}
+}

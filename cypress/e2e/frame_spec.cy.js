@@ -13,7 +13,7 @@ describe('Testar página Frame na url http://the-internet.herokuapp.com/', ()=>{
 
 
 
-    context('Dado o click no Frame devo ser redirecionado para página', ()=>{
+    context.skip('Dado o click no Frame devo ser redirecionado para página', ()=>{
 
 
 

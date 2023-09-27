@@ -1,0 +1,8 @@
+{
+    "link": {"locator": "Notification Messages"},
+    "path_url": {"url": "notification_message_rendered"},
+    "title": {"locator": ".example > h3", "text": "Notification Message"},
+    "link_click_here": {"locator": "Click here"},
+    "label_msg": {"locator": "#flash"}
+}
+

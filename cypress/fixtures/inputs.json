@@ -1,0 +1,12 @@
+{
+	"link": {
+		"locator": "Inputs"
+	},
+	"path_url": {
+		"url": "inputs"
+	},
+	"title": {
+		"locator": ".large-6 > h3",
+		"text": "Inputs"
+	}
+}

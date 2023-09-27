@@ -7,7 +7,6 @@ describe('Testar página Disappearing Elements na url http://the-internet.heroku
  
 beforeEach(()=>{  
     cy.validateHome()
-    cy.fixture("dynamic_content").as('dynamic_content')
   })
   
 
@@ -16,8 +15,6 @@ beforeEach(()=>{
     for(let x = 0; x <= 10; x++) {
 
       it('Então clico no botão CLICK HERE e altero a ordem dos CONTENT', ()=>{
-
-        cy.get('@dynamic_content').then( dynamic_content => {
 
           cy.assertPage(dynamic_content.link.locator, dynamic_content.path_url.url,
           dynamic_content.title.locator, dynamic_content.title.text)
@@ -47,8 +44,7 @@ beforeEach(()=>{
 
            })                     
   
-        })
-      })    
+        })   
     }) 
     }  
   })

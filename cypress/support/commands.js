@@ -7,21 +7,18 @@ Cypress.Commands.add('validateHome', ()=>{
 
       cy.fixture("home").as('home')
 
-      cy.get('@home').then(home => {
 
       cy.get(home.title.locator).then(el => {
 
-        expect(el[0].innerText, 'Assert Title').equal(home.title.text)
+        expect(el[0].innerText, 'Assert Title Home').equal(home.title.text)
       
       })  
 
       cy.get(home.sub_title.locator).then(el => {
       
-        expect(el[0].innerText, 'Assert Title').equal(home.sub_title.text)
+        expect(el[0].innerText, 'Assert SubTitle Home').equal(home.sub_title.text)
       
       })
-
-    })
 })
 
 
@@ -45,7 +42,7 @@ Cypress.Commands.add('assertPage', (link_name, path_url, locator_title, title)=>
                 expect(url).equal(Cypress.config().baseUrl.concat(path_url))
 
                 cy.get(locator_title).then( (el)=>{
-                    expect(el[0].innerText).equal(title)
+                    expect(el[0].innerText, 'Assert Title').equal(title)
                 })
             })
 })

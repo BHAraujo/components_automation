@@ -7,7 +7,6 @@ describe('Testar página Dynamic Loading na url http://the-internet.herokuapp.co
  
 beforeEach(()=>{  
     cy.validateHome()
-    cy.fixture("dynamic_loading").as('dynamic_loading')
   })
 
   
@@ -22,8 +21,6 @@ beforeEach(()=>{
         context(`Dado o click no link Dynamic Loading e o ${result.link}`, ()=>{
 
         it('Então clico no botão START e valido a mensagem exibida HELLO WORLD!', ()=>{
-
-          cy.get('@dynamic_loading').then( dynamic_loading => { 
 
             cy.assertPage(dynamic_loading.link.locator, dynamic_loading.path_url.url,
             dynamic_loading.title.locator, dynamic_loading.title.text)
@@ -49,7 +46,6 @@ beforeEach(()=>{
               expect(el[0].children[0].innerText, 'Assert Text after clique Button').equal('Hello World!')
           
           })
-        })
       })
     })
   })

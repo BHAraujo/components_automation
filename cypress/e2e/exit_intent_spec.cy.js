@@ -7,7 +7,6 @@ describe('Testar página Exit Intent na url http://the-internet.herokuapp.com/',
  
 beforeEach(()=>{  
     cy.validateHome()
-    cy.fixture("exit_intent").as('exit_intent')
   })
 
   context.skip('Dado o click no link Exit Intent e passo o ponteiro do mouse na aba aberta', ()=>{

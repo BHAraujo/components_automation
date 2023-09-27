@@ -1,14 +1,13 @@
 /// <reference types="cypress"/>
 
 
-// import hovers from '../fixtures/hovers.json'
+import hovers from '../fixtures/hovers.json'
 
 
 describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp.com/', ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()
-    //   cy.fixture("hovers").as('hovers')
     })
 
 

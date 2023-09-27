@@ -1,21 +1,18 @@
 /// <reference types="cypress"/>
 
-// import context_menu from '../fixtures/context_menu.json'
+import context_menu from '../fixtures/context_menu.json'
 
 
 describe('Testar página Context Menu na url http://the-internet.herokuapp.com/', ()=>{
       
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("context_menu").as('context_menu')
     })
     
     
     context('Dado o click no link Context Menu', ()=>{
       
       it('Então clico no Context Menu e o valido mensagem do alert', ()=>{
-
-        cy.get('@context_menu').then( context_menu => {
 
           cy.assertPage(context_menu.link.locator, context_menu.path_url.url,
           context_menu.title.locator, context_menu.title.text)
@@ -35,8 +32,6 @@ describe('Testar página Context Menu na url http://the-internet.herokuapp.com/'
             expect(msg, 'Assert menssage ALERT').equal(context_menu.msg_alert.text)
          
           })
-
-      })
           
     })        
 

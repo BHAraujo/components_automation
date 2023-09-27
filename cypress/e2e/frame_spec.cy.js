@@ -8,7 +8,6 @@ describe('Testar página Frame na url http://the-internet.herokuapp.com/', ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()
-    //   cy.fixture("frames").as('frames')
     })
 
 

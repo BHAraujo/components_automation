@@ -8,7 +8,6 @@ describe('Testar página Forgot Password na url http://the-internet.herokuapp.co
 
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("forgot_password").as('forgot_password')
     })
 
 
@@ -17,9 +16,6 @@ describe('Testar página Forgot Password na url http://the-internet.herokuapp.co
 
 
         it('Então preencho o campo E-mail e clico no botão Retrieve password', ()=>{
-
-            cy.get('@forgot_password').then( forgot_password => {
-
             
             cy.assertPage(forgot_password.link.locator, forgot_password.path_url.url,
             forgot_password.title.locator, forgot_password.title.text)
@@ -32,12 +28,7 @@ describe('Testar página Forgot Password na url http://the-internet.herokuapp.co
 
                 expect(el[0].innerText, 'Assert Title not Found').equal(forgot_password.h1_not_found.text)
             
-        })
-
-            })    
-            
-
-            
+         })  
         })
     })
 })

@@ -1,0 +1,15 @@
+{
+	"link": {
+		"locator": "JQuery UI Menus"
+	},
+	"path_url": {
+		"url": "jqueryui/menu"
+	},
+	"title": {
+		"locator": ".example > h3",
+		"text": "JQueryUI - Menu"
+	},
+	"menu_disabled": {
+		"locator": ".ui-menu-icon"
+	}
+}

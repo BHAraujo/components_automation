@@ -8,7 +8,6 @@ describe('Testar página Infinite Scroll na url http://the-internet.herokuapp.co
 
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("infinite_scroll").as('infinite_scroll')
     })
 
 
@@ -16,9 +15,7 @@ describe('Testar página Infinite Scroll na url http://the-internet.herokuapp.co
     context('Dado o click no Infinite Scroll devo ser redirecionado para página', ()=>{
 
                 it('Então realizo o scroll na página e valido a criação dos textos automaticamente', ()=>{
-                
-                    cy.get('@infinite_scroll').then( infinite_scroll => {
-
+            
 
                         cy.assertPage(infinite_scroll.link.locator, infinite_scroll.path_url.locator,
                         infinite_scroll.title.locator,infinite_scroll.title.text)
@@ -35,9 +32,6 @@ describe('Testar página Infinite Scroll na url http://the-internet.herokuapp.co
                         cy.get(infinite_scroll.div_dynamic.locator).then( el => {
                             expect(el.length).equal(7)
                         })
-
-                    }) 
-
                 })
         })
 })

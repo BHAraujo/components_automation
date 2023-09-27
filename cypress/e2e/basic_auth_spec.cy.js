@@ -6,7 +6,6 @@ import basic_auth from '../fixtures/basic_auth.json'
 describe('Testar página Basic Auth na url http://the-internet.herokuapp.com/', ()=>{
   before(()=>{
       cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth')
-      cy.fixture("basic_auth").as('basic_auth')
     })
 
   

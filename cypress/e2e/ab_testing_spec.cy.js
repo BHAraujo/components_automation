@@ -8,14 +8,12 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
 
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("ab_testing").as('ab_testing')
     })
 
     context('Dado o click no link A/B Testing', ()=>{
   
       it('Então válido a mensagem da página', ()=>{
        
-      cy.get('@ab_testing').then(ab_testing => {
   
       cy.contains(ab_testing.link.locator).click()
 
@@ -37,8 +35,7 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
           expect(el[0].innerHTML, 'Assert Text').equal(ab_testing.description.text)})
         
       })
-     
-      })      
+           
       
     }) 
 

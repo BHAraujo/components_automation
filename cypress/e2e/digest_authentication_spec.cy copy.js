@@ -6,7 +6,6 @@ import digest_auth from '../fixtures/digest_auth.json'
 describe('Testar página Digest Authentication na url http://the-internet.herokuapp.com/', ()=>{
   before(()=>{
       // cy.visit('http://the-internet.herokuapp.com/digest_auth')
-      cy.fixture("digest_auth").as('digest_auth')
     })
 
   

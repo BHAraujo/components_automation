@@ -8,7 +8,6 @@ describe('Testar página Floating Menu na url http://the-internet.herokuapp.com/
 
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("floating_menu").as('floating_menu')
     })
 
 
@@ -18,9 +17,7 @@ describe('Testar página Floating Menu na url http://the-internet.herokuapp.com/
         const lista_href = ['home', 'news', 'contact', 'about'].forEach( menu => {
 
                 it(`Então clico no botão ${menu} e valido corrente url`, ()=>{
-                     
-                    cy.get('@floating_menu').then( floating_menu => {
-                        
+                                             
                     cy.assertPage(floating_menu.link.locator, floating_menu.path_url.url,
                     floating_menu.title.locator, floating_menu.title.text)
 
@@ -34,7 +31,6 @@ describe('Testar página Floating Menu na url http://the-internet.herokuapp.com/
                             expect(el, 'Assert Url').equal(Cypress.config().baseUrl.concat('floating_menu#' + menu))
                         })
                     })
-                  })
             })          
         })  
     })

@@ -8,14 +8,11 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
 
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("file_upload").as('file_upload')
     })
 
     context('Dado o click no File Upload devo ser redirecionado para página', ()=>{
   
       it('Então clico no botão escolher arquivo e clico no botão upload', ()=>{
-
-        cy.get('@file_upload').then( file_upload => {
 
         cy.assertPage(file_upload.link.locator, file_upload.path_url.url,
         file_upload.title.locator, file_upload.title.text)
@@ -37,9 +34,6 @@ describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/',
             expect(el[0].innerText, 'Assert Name File Uploaded').equal(file)
             
         })
-
-        })
-        
       })
     })
 })

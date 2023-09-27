@@ -1,0 +1,19 @@
+{
+	"link": {
+		"locator": "Multiple Windows"
+	},
+	"path_url": {
+		"url": "windows"
+	},
+	"title": {
+		"locator": ".example > h3",
+		"text": "Opening a new window"
+	},
+	"new_page": {
+		"locator": ".example > a"
+	},
+	"msg_new_page": {
+		"locator": ".example > h3",
+		"text": "New Window"
+	}
+}

@@ -9,15 +9,12 @@ describe('Testar página FILE DOWNLOAD na url http://the-internet.herokuapp.com/
  
 beforeEach(()=>{  
     cy.validateHome()
-    cy.fixture("file_download").as('file_download')
   })
 
 
   context.skip('Dado o click no link FILE DOWNLOAD valido o título da página', ()=>{
 
     it('Então valido a quantidae de clicks disponíveis para download', ()=>{
-
-        cy.get('@file_download').then( file_download => {
 
         cy.assertPage(file_download.link.locator, file_download.path_url.url,
         file_download.title.locator, file_download.title_modal.text)
@@ -34,11 +31,8 @@ beforeEach(()=>{
 
             expect(lista_href.length).equal(66)
         })
-
-        })
-        
-     })
-    })  
+    })
+})  
   
     const lista_href = [
         'eva-logo.png', 'Jpeg_with_exif.jpeg', 'Bugs.txt', 

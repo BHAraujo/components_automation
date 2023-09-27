@@ -7,15 +7,12 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
       
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("checkboxes").as('checkboxes')
     })
     
     
     context('Dado o click no link Checkboxes', ()=>{
   
       it('Então o checkbox 2 deve estar checked', ()=>{
-         
-        cy.get('@checkboxes').then(checkboxes => {
 
           cy.assertPage(checkboxes.link.locator, checkboxes.path_url.url,
           checkboxes.title.locator, checkboxes.title.text)
@@ -25,10 +22,6 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
             expect(el[1].checked).equal(true)
           })
         
-
-        })  
-        
-
         })        
 
     }) 
@@ -36,8 +29,7 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
 
     context('Dado o click no link Checkboxes', ()=>{
   
-      it('Então altero o atributo checked para false dos dois checkboxes', ()=>{
-        cy.get('@checkboxes').then(checkboxes => {
+      it('Então altero o atributo checked para false dos dois checkboxes', ()=>{ 
 
           cy.assertPage('Checkboxes', 'checkboxes',
           checkboxes.title.locator, 'Checkboxes')
@@ -50,8 +42,7 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
           })
         
         })
-            
-      })
+
     })        
 }) 
 
@@ -59,7 +50,6 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
     context('Dado o click no link Checkboxes', ()=>{
   
       it('Então altero o atributo checked para true do checkbox 1', ()=>{
-        cy.get('@checkboxes').then(checkboxes => {
 
         cy.contains('Checkboxes').click()
 
@@ -77,8 +67,7 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
       
         })
       })
-                     
-    })
+
         
   })        
 

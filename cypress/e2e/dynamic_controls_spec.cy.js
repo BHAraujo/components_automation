@@ -30,8 +30,6 @@ beforeEach(()=>{
       
       it('Então valido a mensagem exibida e o CHECKBOX com status UNCHECKED', ()=>{
 
-        cy.get('@dynamic_controls').then( dynamic_controls => {
-
         cy.get(dynamic_controls.checked_before_remove.locator).as('checkbox').click()
 
         cy.get(dynamic_controls.button_remove_add.locator).as('btn_remove_add').click()
@@ -58,7 +56,6 @@ beforeEach(()=>{
             
             })
           })
-        }) 
       } 
     )   
   })
@@ -67,8 +64,6 @@ beforeEach(()=>{
   context('Dado o INPUT Enable/disable e o clique no botão ENABLE', ()=>{
   
     it('Então preencho o INPUT e clico no botão DISABLE para desabilitar o INPUT', ()=>{
-
-      cy.get('@dynamic_controls').then( dynamic_controls => {
 
       cy.get(dynamic_controls.input_enable_disable.locator).as('input_enable_disable').then( el => {
 
@@ -111,10 +106,6 @@ beforeEach(()=>{
         expect(el[0].disabled).equal(true)
       
       })
-
-      })
-      
-      
     })
   })
 

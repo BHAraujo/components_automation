@@ -1,13 +1,12 @@
 /// <reference types="cypress"/>
 
-// import drag_and_drop from '../fixtures/drag_and_drop.json'
+import drag_and_drop from '../fixtures/drag_and_drop.json'
 
 
 describe('Testar página Disappearing Elements na url http://the-internet.herokuapp.com/', ()=>{
  
 beforeEach(()=>{  
     cy.validateHome()
-    cy.fixture("drag_and_drop").as('drag_and_drop')
   })
   
 
@@ -15,8 +14,6 @@ beforeEach(()=>{
   
       it('Então arrasto o componente A no lugar do componente B', ()=>{
         
-          cy.get('@drag_and_drop').then( drag_and_drop => {
-
             cy.assertPage(drag_and_drop.link.locator, drag_and_drop.path_url.url,
             drag_and_drop.title.locator, drag_and_drop.title.text)
   
@@ -32,9 +29,6 @@ beforeEach(()=>{
             cy.get(drag_and_drop.div_headers.locator).then( el => {
               expect(el[0].innerText, 'Assert Position compoment B').equal('B')
             })
-
-          })
-           
     }) 
   })
 })

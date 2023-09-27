@@ -1,2 +1,4 @@
-# sauce_automation
-Automação do Fluxo de e-commerce do site http://the-internet.herokuapp.com/
+# components_automation
+Automação de todos os componentes da página http://the-internet.herokuapp.com/
+
+DEVELOPMENT.....

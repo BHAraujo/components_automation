@@ -8,7 +8,6 @@ describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp
 
     beforeEach(()=>{  
       cy.validateHome()
-      cy.fixture("horizontal_slider").as('horizontal_slider')
     })
 
 
@@ -21,8 +20,7 @@ describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp
                         ].forEach( result => {
                           
                             it(`Então clico no link Horinzontal Slicer e arrasto para ${result} e valido valor do slider`, ()=>{
-                     
-                              cy.get('@horizontal_slider').then( horizontal_slider => {
+         
 
                                 cy.assertPage(horizontal_slider.link.locator, horizontal_slider.path_url.url,
                                     horizontal_slider.title.locator,horizontal_slider.title.text)
@@ -47,7 +45,7 @@ describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp
                                 })
                                 })
                  
-                        })  
+                   
                         
                     })
                     

@@ -7,15 +7,12 @@ describe('Testar página Disappearing Elements na url http://the-internet.heroku
  
 beforeEach(()=>{  
     cy.validateHome()
-    cy.fixture("dropdown").as('dropdown')
   })
   
 
     context('Dado o click no link Dropdrown', ()=>{
   
       it('Então não deve estar selecionao nenhuma opção', ()=>{
-
-        cy.get('@dropdown').then( dropdown => {
 
         cy.assertPage(dropdown.link.locator, dropdown.path_url.url,
         dropdown.title.locator, dropdown.title.text)
@@ -24,10 +21,7 @@ beforeEach(()=>{
 
           expect(el[0].innerText, 'Assert default options').equal('Please select an option')
         
-        })
-
-        })
-        
+        })  
     }) 
   })
 
@@ -42,8 +36,6 @@ beforeEach(()=>{
 
       it(`Então seleciono a opção ${result.value}`, ()=>{
           
-        cy.get('@dropdown').then( dropdown => {
-
         cy.assertPage(dropdown.link.locator, dropdown.path_url.url,
         dropdown.title.locator, dropdown.title.text)
         
@@ -56,11 +48,11 @@ beforeEach(()=>{
           }
 
         })
-     }) 
-  })
+
+    })
    
+    })
   })
-})
 })
 
 

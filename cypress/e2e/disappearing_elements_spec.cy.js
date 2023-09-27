@@ -1,10 +1,10 @@
 /// <reference types="cypress"/>
 
+
 import disappearing_elements from '../fixtures/disappearing_elements.json'
-import home from '../fixtures/home.json'
 
 
-describe('Testar página Disappearing Elements na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Disappearing na url ${Cypress.config().baseUrl}`, ()=>{ 
  
 beforeEach(()=>{  
     cy.validateHome()
@@ -113,10 +113,15 @@ beforeEach(()=>{
 
         cy.get('ul>li').then( el => {
           if (el.length == 5 || el.length == 4) 
-            if (el.length == 5){
+            
+          if (el.length == 5){
+
               expect(el.length).equal(5)
+          
             }else{
+
               expect(el.length).equal(4)
+           
             }
           
         })
@@ -124,11 +129,14 @@ beforeEach(()=>{
         for(let x = 0; x < 5; x++){
 
           cy.get('ul>li').then( el => {
+
             cy.reload()  
             
             if (el.length == 4){
+
               expect(el.length).equal(4)
               x = 5
+          
             }
            
          })

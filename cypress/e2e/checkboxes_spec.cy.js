@@ -1,9 +1,10 @@
 /// <reference types="cypress"/>
 
+
 import checkboxes from '../fixtures/checkboxes.json'
 
 
-describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Checkboxes na url ${Cypress.config().baseUrl}`, ()=>{ 
       
     beforeEach(()=>{  
       cy.validateHome()
@@ -18,8 +19,11 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
           checkboxes.title.locator, checkboxes.title.text)
 
           cy.get(checkboxes.checkboxes.locator).then( el => {
+            
             expect(el[0].checked).equal(false)
+            
             expect(el[1].checked).equal(true)
+          
           })
         
         })        
@@ -35,10 +39,13 @@ describe('Testar página Checkboxes na url http://the-internet.herokuapp.com/', 
           checkboxes.title.locator, 'Checkboxes')
             
           cy.get(checkboxes.checkboxes.locator).then( el => {
+          
             expect(el[0].checked).equal(false)
             
           cy.wrap(el[1]).click().then( el => {
-              expect(el[0].checked).equal(false)
+          
+            expect(el[0].checked).equal(false)
+          
           })
         
         })

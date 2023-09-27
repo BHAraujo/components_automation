@@ -4,7 +4,8 @@
 import horizontal_slider from '../fixtures/horizontal_slider.json'
 
 
-describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Horinzontal Slider na url ${Cypress.config().baseUrl}`, ()=>{
+
 
     beforeEach(()=>{  
       cy.validateHome()

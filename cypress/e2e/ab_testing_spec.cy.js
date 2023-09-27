@@ -4,7 +4,7 @@
 import ab_testing from '../fixtures/ab_testing.json'
 
 
-describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link A/B Testing na url ${Cypress.config().baseUrl}`, ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()

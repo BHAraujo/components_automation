@@ -4,7 +4,7 @@
 import inputs from '../fixtures/inputs.json'
 
 
-describe('Testar página Infinite Scroll na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Inputs na url ${Cypress.config().baseUrl}`, ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()

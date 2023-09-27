@@ -1,9 +1,10 @@
 /// <reference types="cypress"/>
 
+
 import dynamic_controls from '../fixtures/dynamic_controls.json'
 
 
-describe('Testar página Dynamic Controls na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Dynamic Controls na url ${Cypress.config().baseUrl}`, ()=>{ 
  
 beforeEach(()=>{  
     cy.validateHome()
@@ -35,7 +36,9 @@ beforeEach(()=>{
         cy.get(dynamic_controls.button_remove_add.locator).as('btn_remove_add').click()
 
         cy.get(dynamic_controls.message_load.locator).should('be.visible').then( el => {
+
           expect(el[0].outerText).equal("Wait for it... ")
+          
         })
 
         cy.get(dynamic_controls.message_success.locator).should('be.visible').then( el => {

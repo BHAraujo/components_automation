@@ -1,13 +1,15 @@
 /// <reference types="cypress"/>
 
+
 import dynamic_content from '../fixtures/dynamic_content.json'
 
 
-describe('Testar página Disappearing Elements na url http://the-internet.herokuapp.com/', ()=>{
- 
-beforeEach(()=>{  
-    cy.validateHome()
-  })
+
+describe(`Testar componentes do link Dynamic Content na url ${Cypress.config().baseUrl}`, ()=>{ 
+    
+    beforeEach(()=>{  
+        cy.validateHome()
+      })
   
 
     context('Dado o click no link Dynamic Content', ()=>{

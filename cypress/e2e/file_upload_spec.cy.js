@@ -4,7 +4,7 @@
 import file_upload from '../fixtures/file_upload.json'
 
 
-describe('Testar página A/B Testing na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link File Upload na url ${Cypress.config().baseUrl}`, ()=>{ 
 
     beforeEach(()=>{  
       cy.validateHome()

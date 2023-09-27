@@ -4,14 +4,14 @@
 import redirect_link from '../fixtures/redirect_link.json'
 
 
-describe('Testar página Redirect Link na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Redirect Link na url ${Cypress.config().baseUrl}`, ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()
 
     })
                             
-        context('Dado o click link Redirect Link devo ser redirecionado para página e clico no link HERE', ()=>{
+        context('Dado o click no link Redirect Link devo ser redirecionado para página e clico no link HERE', ()=>{
 
        const status_code = [
                               200, 301, 404, 500

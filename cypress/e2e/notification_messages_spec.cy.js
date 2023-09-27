@@ -4,7 +4,8 @@
 import notification_message from '../fixtures/notification_message.json'
 
 
-describe('Testar página Notification Messages na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Notification Messages na url ${Cypress.config().baseUrl}`, ()=>{
+
 
     beforeEach(()=>{  
       cy.validateHome()

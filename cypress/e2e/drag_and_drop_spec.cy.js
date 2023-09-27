@@ -1,13 +1,14 @@
 /// <reference types="cypress"/>
 
+
 import drag_and_drop from '../fixtures/drag_and_drop.json'
 
 
-describe('Testar página Disappearing Elements na url http://the-internet.herokuapp.com/', ()=>{
- 
-beforeEach(()=>{  
-    cy.validateHome()
-  })
+describe(`Testar componentes do link Drap and Drop na url ${Cypress.config().baseUrl}`, ()=>{ 
+
+    beforeEach(()=>{  
+      cy.validateHome()
+    })
   
 
     context('Dado o click no link Drag Drop', ()=>{
@@ -19,7 +20,9 @@ beforeEach(()=>{
   
               
             cy.get(drag_and_drop.div_headers.locator).then( el => {
+
               expect(el[0].innerText, 'Assert Position compoment A').equal('A')
+
             })
             
             const dataTransfer = new DataTransfer;
@@ -27,7 +30,9 @@ beforeEach(()=>{
             cy.get(drag_and_drop.div_b.locator).trigger('drop', { dataTransfer });
   
             cy.get(drag_and_drop.div_headers.locator).then( el => {
+             
               expect(el[0].innerText, 'Assert Position compoment B').equal('B')
+           
             })
     }) 
   })

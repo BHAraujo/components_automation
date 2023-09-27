@@ -4,8 +4,8 @@
 // import javascript_alerts from '../fixtures/javascript_alerts.json'
 
 
+describe(`Testar componentes do link JavaScript Alerts na url ${Cypress.config().baseUrl}`, ()=>{
 
-describe('Testar página JavaScript Alerts na url http://the-internet.herokuapp.com/ com título the-internet Available Examples', ()=>{
     beforeEach(()=>{  
         cy.validateHome()   
       })

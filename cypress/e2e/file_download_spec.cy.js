@@ -1,11 +1,11 @@
 /// <reference types="cypress"/>
 
+
 import file_download from '../fixtures/file_download.json'
 
 
+describe(`Testar componentes do link File Download na url ${Cypress.config().baseUrl}`, ()=>{ 
 
-
-describe('Testar página FILE DOWNLOAD na url http://the-internet.herokuapp.com/', ()=>{
  
 beforeEach(()=>{  
     cy.validateHome()
@@ -55,7 +55,9 @@ beforeEach(()=>{
             file_download.title.locator, file_download.title_modal.text)
 
             cy.downloadFile('http://the-internet.herokuapp.com/download/'+ file, '../cypress/downloads', file).then(() =>{
+
                 cy.readFile('./cypress/downloads/'+file).should('be.to.exist')
+                
              })
              })   
             

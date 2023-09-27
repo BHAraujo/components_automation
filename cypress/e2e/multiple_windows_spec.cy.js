@@ -4,7 +4,7 @@
 import multiple_windows from '../fixtures/multiple_windows.json'
 
 
-describe('Testar página Multiple Windows na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Multiple Windows na url ${Cypress.config().baseUrl}`, ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()

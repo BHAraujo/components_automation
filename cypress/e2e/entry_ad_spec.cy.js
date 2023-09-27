@@ -1,13 +1,15 @@
 /// <reference types="cypress"/>
 
+
 import entry_ad from '../fixtures/entry_ad.json'
 
 
-describe('Testar página Dynamic Controls na url http://the-internet.herokuapp.com/', ()=>{
- 
-beforeEach(()=>{  
+describe(`Testar componentes do link Entry Ad na url ${Cypress.config().baseUrl}`, ()=>{ 
+
+
+    beforeEach(()=>{  
     cy.validateHome()
-  })
+    })
 
 
         context('Dado o click no link Entry AD validar modal', ()=>{
@@ -18,7 +20,9 @@ beforeEach(()=>{
                 entry_ad.title_modal.locator, entry_ad.title_modal.text)
 
                 cy.get(entry_ad.description_modal.locator).then( el => {
+
                     expect(el[0].innerText, 'Assert description Modal').equal(entry_ad.description_modal.text)
+
                 })
 
         })
@@ -37,7 +41,9 @@ beforeEach(()=>{
             cy.contains('click here').should('be.visible').click()
 
             cy.get(entry_ad.description_modal.locator).then( el => {
+
                 expect(el[0].innerText, 'Assert description Modal').equal(entry_ad.description_modal.text)
+                
             })
     })
     })

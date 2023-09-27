@@ -1,13 +1,15 @@
 /// <reference types="cypress"/>
 
+
 import dynamic_loading from '../fixtures/dynamic_loading.json'
 
 
-describe('Testar página Dynamic Loading na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Dynamic Loading na url ${Cypress.config().baseUrl}`, ()=>{ 
+
  
-beforeEach(()=>{  
-    cy.validateHome()
-  })
+  beforeEach(()=>{  
+      cy.validateHome()
+    })
 
   
 

@@ -4,7 +4,8 @@
 import floating_menu from '../fixtures/floating_menu.json'
 
 
-describe('Testar página Floating Menu na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Floating Menu na url ${Cypress.config().baseUrl}`, ()=>{ 
+
 
     beforeEach(()=>{  
       cy.validateHome()
@@ -29,6 +30,7 @@ describe('Testar página Floating Menu na url http://the-internet.herokuapp.com/
                         cy.url().then(el => {
                             
                             expect(el, 'Assert Url').equal(Cypress.config().baseUrl.concat('floating_menu#' + menu))
+                            
                         })
                     })
             })          

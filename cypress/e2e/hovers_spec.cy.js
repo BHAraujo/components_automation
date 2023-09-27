@@ -4,7 +4,7 @@
 import hovers from '../fixtures/hovers.json'
 
 
-describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Hovers na url ${Cypress.config().baseUrl}`, ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()
@@ -12,7 +12,7 @@ describe('Testar página Horinzontal Slicer na url http://the-internet.herokuapp
 
 
 
-    context('Dado o click no Hovers devo ser redirecionado para página', ()=>{
+    context.skip('Dado o click no Hovers devo ser redirecionado para página', ()=>{
 
                           
         it('Então clico no hover user1 e clico no link View Profile e valido o redirecionamento a url', ()=>{

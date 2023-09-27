@@ -1,9 +1,10 @@
 /// <reference types="cypress"/>
 
+
 import context_menu from '../fixtures/context_menu.json'
 
 
-describe('Testar página Context Menu na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Context Menu na url ${Cypress.config().baseUrl}`, ()=>{ 
       
     beforeEach(()=>{  
       cy.validateHome()
@@ -21,6 +22,7 @@ describe('Testar página Context Menu na url http://the-internet.herokuapp.com/'
           cy.get(context_menu.description.locator).then( el => {
 
             expect(el[0].innerText, 'Assert Description').equal(context_menu.description.texts[0].text1)
+
             expect(el[1].innerText, 'Assert Description').equal(context_menu.description.texts[1].text2)
             
           })

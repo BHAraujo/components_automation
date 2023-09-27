@@ -1,11 +1,11 @@
 /// <reference types="cypress"/>
 
 
-
 import form_authentication from '../fixtures/form_authentication.json'
 
 
-describe('Testar página Form Authentication na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Form Authentication na url ${Cypress.config().baseUrl}`, ()=>{ 
+  
   beforeEach(()=>{
     cy.validateHome()
     })
@@ -38,7 +38,9 @@ describe('Testar página Form Authentication na url http://the-internet.herokuap
           cy.get(form_authentication.msg_logged.locator)
           .should('be.visible')
           .then( el => {
+
             expect(el[0].outerText, 'Assert msg logged').equal(form_authentication.msg_logged.text)
+            
           })
   
           cy.get(form_authentication.title_logged.locator).

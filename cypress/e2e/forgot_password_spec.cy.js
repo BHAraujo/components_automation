@@ -4,7 +4,7 @@
 import forgot_password from '../fixtures/forgot_password.json'
 
 
-describe('Testar página Forgot Password na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Forgot Password na url ${Cypress.config().baseUrl}`, ()=>{ 
 
     beforeEach(()=>{  
       cy.validateHome()

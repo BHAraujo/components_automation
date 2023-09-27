@@ -4,7 +4,7 @@
 import jquery_ui_menus from '../fixtures/jquery_ui_menus.json'
 
 
-describe('Testar página Infinite Scroll na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link JQuery Ui Menus Alerts na url ${Cypress.config().baseUrl}`, ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()

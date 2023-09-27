@@ -1,13 +1,14 @@
 /// <reference types="cypress"/>
 
+
 import dropdown from '../fixtures/dropdown.json'
 
 
-describe('Testar página Disappearing Elements na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Dropodown na url ${Cypress.config().baseUrl}`, ()=>{ 
  
-beforeEach(()=>{  
-    cy.validateHome()
-  })
+  beforeEach(()=>{  
+      cy.validateHome()
+    })
   
 
     context('Dado o click no link Dropdrown', ()=>{
@@ -44,7 +45,9 @@ beforeEach(()=>{
           expect(el[result.index].innerText, 'Assert default options').equal(result.value)
          
           if (result.index == 1){
+
             cy.reload()
+          
           }
 
         })

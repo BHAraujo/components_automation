@@ -3,8 +3,7 @@
 
 // import frames from '../fixtures/frames.json'
 
-
-describe('Testar página Frame na url http://the-internet.herokuapp.com/', ()=>{
+describe(`Testar componentes do link Frame na url ${Cypress.config().baseUrl}`, ()=>{
 
     beforeEach(()=>{  
       cy.validateHome()
@@ -20,13 +19,17 @@ describe('Testar página Frame na url http://the-internet.herokuapp.com/', ()=>{
                      
                     cy.contains('Frames').should('be.visible').click().then( ()=> {
                         cy.url().then( (url)=> {
+
                             expect(url).equal(Cypress.config().baseUrl.concat('frames'))
+
                         })
                     })
 
                     cy.contains('Nested Frames').should('be.visible').click().then(()=>{
                         cy.url().then( (url)=> {
+
                             expect(url).equal(Cypress.config().baseUrl.concat('nested_frames'))
+                            
                         })
                     })
 

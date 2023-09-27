@@ -1,0 +1,18 @@
+{
+	"link": {
+		"locator": "Redirect Link"
+	},
+	"path_url": {
+		"url": "redirector"
+	},
+	"title": {
+		"locator": ".example > h3",
+		"text": "Redirection"
+	},
+	"link_click_here": {
+		"locator": "#redirect"
+	},
+	"p_message_status": {
+		"locator": ".example > p"
+	}
+}

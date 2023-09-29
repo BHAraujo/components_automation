@@ -78,9 +78,6 @@ describe(`Testar componentes do link Form Authentication na url ${Cypress.config
 
         it('Então clico no botão Login valido a mensagens exibida de erro exibida', ()=>{
 
-          
-          cy.get('@form_authentication')
-          .then( form_authentication => {
 
           cy.assertPage(form_authentication.link.locator, form_authentication.path_url.url,
           form_authentication.title.locator, form_authentication.title.text)
@@ -107,7 +104,7 @@ describe(`Testar componentes do link Form Authentication na url ${Cypress.config
           expect(el[0].innerText, 'Assert message error login').equal(form_authentication.message_error_login.text)
         
         })
-      })
+    
     })
   })
 })

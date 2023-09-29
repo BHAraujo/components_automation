@@ -1,0 +1,6 @@
+{
+    "link": {"locator": "Hovers"},
+    "path_url": {"url": "hovers"},
+    "title": {"locator": ".example > h3", "text": "Hovers"},
+    "div_hovers": {"locator": ".figcaption"}
+}

@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
 
-// import hovers from '../fixtures/hovers.json'
+import hovers from '../fixtures/hovers.json'
 
 
 describe(`Testar componentes do link Hovers na url ${Cypress.config().baseUrl}`, ()=>{
@@ -22,17 +22,9 @@ describe(`Testar componentes do link Hovers na url ${Cypress.config().baseUrl}`,
                           
                             it(`Então clico no hover ${link.url} e clico no link View Profile e valido o redirecionamento a url`, ()=>{
                     
-                                cy.assertPage('Hovers', 'hovers','.example > h3', 'Hovers') 
-                            
+                                cy.assertPage(hovers.link.locator, hovers.path_url.url,
+                                              hovers.title.locator, hovers.title.text) 
                     
-                                cy.url().then( url => {
-                    
-                                    expect(url).equal(Cypress.config().baseUrl.concat('hovers'))
-                    
-                                    cy.get('.example > h3').then( (el)=>{
-                                        expect(el[0].innerText).equal('Hovers')
-                                    })
-                                })
                     
                                 cy.get('.figcaption').then( el => {
                                     
@@ -42,7 +34,7 @@ describe(`Testar componentes do link Hovers na url ${Cypress.config().baseUrl}`,
                                 })
                     
                                 
-                                cy.get('.figcaption').find('a').then(el => {
+                                cy.get(hovers.div_hovers.locator).find('a').then(el => {
                                  
                                     cy.wrap(el[link.index]).as('link_view_profile')
                     

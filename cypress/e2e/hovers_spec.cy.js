@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
 
-import hovers from '../fixtures/hovers.json'
+// import hovers from '../fixtures/hovers.json'
 
 
 describe(`Testar componentes do link Hovers na url ${Cypress.config().baseUrl}`, ()=>{

@@ -16,8 +16,10 @@ beforeEach(()=>{
     context('Dado o click no link Disappearing Elements', ()=>{
   
       it('Então clico no link HOME devo ser redirecionado para tela HOME', ()=>{
-                
-          cy.contains('Disappearing Elements').click()
+          
+         cy.assertPage(disappearing_elements.link_disappearing.locator, disappearing_elements.path_url.url,
+          disappearing_elements.title.locator, disappearing_elements.title.text)
+
           cy.contains(disappearing_elements.links[0].locator_home).click()
           
           cy.get(home.title.locator).then( el => {
@@ -37,7 +39,9 @@ beforeEach(()=>{
     it('Então clico no link ABOUT devo ser redirecionado para tela ABOUT', ()=>{
       
         
-        cy.contains('Disappearing Elements').click()
+      cy.assertPage(disappearing_elements.link_disappearing.locator, disappearing_elements.path_url.url,
+        disappearing_elements.title.locator, disappearing_elements.title.text)
+
         cy.contains(disappearing_elements.links[1].locator_about).click()
     
         cy.get(disappearing_elements.links[1].text).then( el => {
@@ -55,8 +59,10 @@ beforeEach(()=>{
   
     it('Então clico no link CONTACT US devo ser redirecionado para tela CONTACT US', ()=>{
               
-        cy.contains('Disappearing Elements').click()
-        cy.contains(disappearing_elements.links[2].locator_contact_us).click()
+      cy.assertPage(disappearing_elements.link_disappearing.locator, disappearing_elements.path_url.url,
+        disappearing_elements.title.locator, disappearing_elements.title.text)
+
+      cy.contains(disappearing_elements.links[2].locator_contact_us).click()
     
         cy.get(disappearing_elements.links[2].text).then( el => {
     
@@ -73,7 +79,9 @@ beforeEach(()=>{
   
     it('Então clico no link PORTFOLIO devo ser redirecionado para tela PORTFOLIO', ()=>{
               
-        cy.contains('Disappearing Elements').click()
+        cy.assertPage(disappearing_elements.link_disappearing.locator, disappearing_elements.path_url.url,
+        disappearing_elements.title.locator, disappearing_elements.title.text)
+
         cy.contains(disappearing_elements.links[3].locator_portfolio).click()
     
         cy.get(disappearing_elements.links[3].text).then( el => {
@@ -91,8 +99,10 @@ beforeEach(()=>{
   
     it('Então clico no link GALLERY devo ser redirecionado para tela GALLERY', ()=>{
               
-        cy.contains('Disappearing Elements').should('be.visible').click()
-        cy.contains(disappearing_elements.links[4].locator_gallery).click()
+      cy.assertPage(disappearing_elements.link_disappearing.locator, disappearing_elements.path_url.url,
+        disappearing_elements.title.locator, disappearing_elements.title.text)
+
+      cy.contains(disappearing_elements.links[4].locator_gallery).click()
     
         cy.get(disappearing_elements.links[4].text).then( el => {
     
@@ -110,7 +120,8 @@ beforeEach(()=>{
     it('Então atualizo a página até o componente Gallery ser removido', ()=>{
       
       
-        cy.contains('Disappearing Elements').click()
+        cy.assertPage(disappearing_elements.link_disappearing.locator, disappearing_elements.path_url.url,
+        disappearing_elements.title.locator, disappearing_elements.title.text)
 
         cy.get('ul>li').then( el => {
           if (el.length == 5 || el.length == 4) 

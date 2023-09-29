@@ -18,6 +18,9 @@
 			"locator_gallery": "Gallery",
 			"text": "h1"
 		}
-	]
+	],
+	"title": {"locator": ".example > h3", "text": "Disappearing Elements"},
+	"path_url": {"url": "disappearing_elements"},
+	"link_disappearing": {"locator": "Disappearing Elements"}
 
 }	

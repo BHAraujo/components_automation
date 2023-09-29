@@ -2,6 +2,7 @@
 
 
 import disappearing_elements from '../fixtures/disappearing_elements.json'
+import home from '../fixtures/home.json'
 
 
 describe(`Testar componentes do link Disappearing na url ${Cypress.config().baseUrl}`, ()=>{ 
@@ -21,7 +22,7 @@ beforeEach(()=>{
           
           cy.get(home.title.locator).then( el => {
 
-          expect(el[0].innerText, "Assert Title Home").equal(home.title.text)
+            expect(el[0].innerText, 'Assert Title Home').equal(home.title.text)
           
           cy.url().should('contain', Cypress.config().baseUrl)
   
@@ -88,7 +89,7 @@ beforeEach(()=>{
 
   context('Dado o click no link Disappearing Elements', ()=>{
   
-    it.skip('Então clico no link GALLERY devo ser redirecionado para tela GALLERY', ()=>{
+    it('Então clico no link GALLERY devo ser redirecionado para tela GALLERY', ()=>{
               
         cy.contains('Disappearing Elements').should('be.visible').click()
         cy.contains(disappearing_elements.links[4].locator_gallery).click()

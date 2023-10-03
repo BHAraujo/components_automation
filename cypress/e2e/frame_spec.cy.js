@@ -13,7 +13,7 @@ describe(`Testar componentes do link Frame na url ${Cypress.config().baseUrl}`, 
 
     context('Dado o click no Frame devo ser redirecionado para página', ()=>{
 
-                it('Então clico no link Nested Frame e valido o texto dos 4 frames presentes no hml', ()=>{
+                it('Então clico no link Nested Frame e valido o texto do frame BOTTOM', ()=>{
                      
                     cy.contains('Frames').should('be.visible').click().then( ()=> {
                         cy.url().then( (url)=> {
@@ -31,26 +31,18 @@ describe(`Testar componentes do link Frame na url ${Cypress.config().baseUrl}`, 
                         })
                     })
 
+                        cy.get('html > frameset > frame').then(el =>{
+                            
+                            const body = el.contents().find('html').find('body')
 
-                
-            
-                         
-                          cy.get('html > frameset > frame:nth-child(1)').then(el =>{
-                              
-                              const body = el.contents().find('/html/body')
 
-                             cy.wrap(body).then( el => {
-                                console.log(el)
-                             })
-                          })
+                            cy.wrap(body).then( el => {
+                            
+                            expect(el[0].innerText, 'Assert frame BOTTOM').equal('BOTTOM')
                         
-                        // cy.wrap(body).then( el => {console.log})
-
-                        // cy.wrap(body).then( b => {
-                        //     console.log(b)
-                        // })
+                        })
+                        })
                 
-
                                         
         })
     })

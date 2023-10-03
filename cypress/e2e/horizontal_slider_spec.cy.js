@@ -36,9 +36,7 @@ describe(`Testar componentes do link Horinzontal Slider na url ${Cypress.config(
                                     cy.get(horizontal_slider.p_slider.locator).then( el => {
                                         expect(el[0].innerText, 'Assert value slider').equal(result)
                                 })
-                                })
-                 
-                   
+                                })       
                         
                     })
                     

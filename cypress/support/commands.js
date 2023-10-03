@@ -39,6 +39,7 @@ Cypress.Commands.add('assertPage', (link_name, path_url, locator_title, title)=>
                 expect(url).equal(Cypress.config().baseUrl.concat(path_url))
 
                 cy.get(locator_title).then( (el)=>{
+                  console.log(el[0].innerText)
                     expect(el[0].innerText, 'Assert Title').equal(title)
                 })
             })

@@ -128,11 +128,11 @@ beforeEach(()=>{
             
           if (el.length == 5){
 
-              expect(el.length).equal(5)
+              expect(el.length, 'Assert amount elements visible').equal(5)
           
             }else{
 
-              expect(el.length).equal(4)
+              expect(el.length, 'Assert amount elements visible').equal(4)
            
             }
           
@@ -146,7 +146,7 @@ beforeEach(()=>{
             
             if (el.length == 4){
 
-              expect(el.length).equal(4)
+              expect(el.length, 'Assert amount elements visible').equal(4)
               x = 5
           
             }

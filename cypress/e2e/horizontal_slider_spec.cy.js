@@ -25,24 +25,16 @@ describe(`Testar componentes do link Horinzontal Slider na url ${Cypress.config(
 
                                 cy.assertPage(horizontal_slider.link.locator, horizontal_slider.path_url.url,
                                     horizontal_slider.title.locator,horizontal_slider.title.text)
-                          
-                                // cy.contains(horizontal_slider.link.locator).should('be.visible').click().then( ()=> {
-                                //     cy.url().then( url => {
-            
-                                //         expect(url).equal(Cypress.config().baseUrl.concat('horizontal_slider'))
-                                        
-                                //     })
-                                // })
-            
+                   
                                 cy.get(horizontal_slider.title.locator).should('be.visible').then( el => {
-                                    expect(el[0].innerText).equal(horizontal_slider.title.text)
+                                    expect(el[0].innerText, 'Assert text slider').equal(horizontal_slider.title.text)
                                 })
             
                                 cy.get(horizontal_slider.slider.locator).invoke("val", result)
                                 .trigger("change")
                                 .click({ force: true }).then(()=>{
                                     cy.get(horizontal_slider.p_slider.locator).then( el => {
-                                        expect(el[0].innerText).equal(result)
+                                        expect(el[0].innerText, 'Assert value slider').equal(result)
                                 })
                                 })
                  

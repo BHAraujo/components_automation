@@ -30,7 +30,7 @@ beforeEach(()=>{
             
         })
 
-        cy.get('head > title').click({force: true})
+        
     })
 })
 

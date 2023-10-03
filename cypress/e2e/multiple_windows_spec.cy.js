@@ -23,12 +23,12 @@ describe(`Testar componentes do link Multiple Windows na url ${Cypress.config().
     
                 cy.url().then(el=>{
 
-                    expect(el).equal('http://the-internet.herokuapp.com/windows/new')
+                    expect(el, 'Assert url redirect').equal('http://the-internet.herokuapp.com/windows/new')
                 })
 
                 cy.get(multiple_windows.msg_new_page.locator).then( el => {
 
-                expect(el[0].innerText).equal(multiple_windows.msg_new_page.text)
+                expect(el[0].innerText,, 'Assert message new page').equal(multiple_windows.msg_new_page.text)
                 
             })         
   

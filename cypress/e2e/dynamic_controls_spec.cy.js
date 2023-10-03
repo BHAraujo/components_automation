@@ -37,13 +37,13 @@ beforeEach(()=>{
 
         cy.get(dynamic_controls.message_load.locator).should('be.visible').then( el => {
 
-          expect(el[0].outerText).equal("Wait for it... ")
+          expect(el[0].outerText, 'Assert message').equal("Wait for it... ")
           
         })
 
         cy.get(dynamic_controls.message_success.locator).should('be.visible').then( el => {
             
-          expect(el[0].outerText).equal("It's gone!")
+          expect(el[0].outerText, 'Assert message').equal("It's gone!")
         
         })
 

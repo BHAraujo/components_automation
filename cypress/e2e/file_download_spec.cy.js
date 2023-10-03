@@ -12,12 +12,12 @@ beforeEach(()=>{
   })
 
 
-  context.skip('Dado o click no link FILE DOWNLOAD valido o título da página', ()=>{
+  context('Dado o click no link FILE DOWNLOAD valido o título da página', ()=>{
 
     it('Então valido a quantidae de clicks disponíveis para download', ()=>{
 
         cy.assertPage(file_download.link.locator, file_download.path_url.url,
-        file_download.title.locator, file_download.title_modal.text)
+        file_download.title.locator, file_download.title.text)
 
         cy.get(file_download.links.locator).then( el => {
   
@@ -29,7 +29,7 @@ beforeEach(()=>{
                 
             }
 
-            expect(lista_href.length).equal(66)
+            expect(lista_href.length, 'Assert amount file download').equal(89)
         })
     })
 })  

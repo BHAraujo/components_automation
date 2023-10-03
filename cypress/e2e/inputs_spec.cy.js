@@ -35,7 +35,7 @@ describe(`Testar componentes do link Inputs na url ${Cypress.config().baseUrl}`,
 
                             }).invoke('val').then( $input_value => {
 
-                                expect(parseInt($input_value)).equal(result)
+                                expect(parseInt($input_value), 'Assert value input').equal(result)
                     })
                             
                 })

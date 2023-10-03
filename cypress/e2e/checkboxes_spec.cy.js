@@ -20,9 +20,9 @@ describe(`Testar componentes do link Checkboxes na url ${Cypress.config().baseUr
 
           cy.get(checkboxes.checkboxes.locator).then( el => {
             
-            expect(el[0].checked).equal(false)
+            expect(el[0].checked, 'Assert checked').equal(false)
             
-            expect(el[1].checked).equal(true)
+            expect(el[1].checked, 'Assert checked').equal(true)
           
           })
         
@@ -40,11 +40,11 @@ describe(`Testar componentes do link Checkboxes na url ${Cypress.config().baseUr
             
           cy.get(checkboxes.checkboxes.locator).then( el => {
           
-            expect(el[0].checked).equal(false)
+            expect(el[0].checked, 'Assert checked').equal(false)
             
           cy.wrap(el[1]).click().then( el => {
           
-            expect(el[0].checked).equal(false)
+            expect(el[0].checked, 'Assert checked').equal(false)
           
           })
         
@@ -61,16 +61,16 @@ describe(`Testar componentes do link Checkboxes na url ${Cypress.config().baseUr
         cy.contains('Checkboxes').click()
 
         cy.get(checkboxes.title.locator).then(el=>{
-          expect(el[0].innerText).equal('Checkboxes')
+          expect(el[0].innerText, 'Assert title').equal('Checkboxes')
         })
           
         cy.get(checkboxes.checkboxes.locator).then( el => {
             
-            expect(el[1].checked).equal(true)
+            expect(el[1].checked, 'Assert checked').equal(true)
       
         cy.wrap(el[0]).click().then( el => {
       
-          expect(el[0].checked).equal(true)
+          expect(el[0].checked, 'Assert checked').equal(true)
       
         })
       })

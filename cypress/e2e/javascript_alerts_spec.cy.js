@@ -27,7 +27,7 @@ describe(`Testar componentes do link JavaScript Alerts na url ${Cypress.config()
 
               cy.get('#result').then( el => {
 
-                expect(el[0].innerText).equal('You successfully clicked an alert')
+                expect(el[0].innerText, 'Assert menssage ALERT').equal('You successfully clicked an alert')
               
             })
         })
@@ -64,11 +64,11 @@ describe(`Testar componentes do link JavaScript Alerts na url ${Cypress.config()
                     cy.get('#result').then( el => {
                     if(result === 'OK'){
 
-                        expect(el[0].innerText).equal('You clicked: Ok')
+                        expect(el[0].innerText, 'Assert message click').equal('You clicked: Ok')
 
                     }else{
 
-                        expect(el[0].innerText).equal('You clicked: Cancel')
+                        expect(el[0].innerText, 'Assert message click').equal('You clicked: Cancel')
 
                      }     
                                 
@@ -94,7 +94,7 @@ describe(`Testar componentes do link JavaScript Alerts na url ${Cypress.config()
 
               cy.get('#result').then( el => {
 
-                expect(el[0].innerText).equal('You successfully clicked an alert')
+                expect(el[0].innerText, 'Assert message click').equal('You successfully clicked an alert')
               
             })
         })

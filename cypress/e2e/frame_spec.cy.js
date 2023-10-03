@@ -11,9 +11,7 @@ describe(`Testar componentes do link Frame na url ${Cypress.config().baseUrl}`, 
 
 
 
-    context.skip('Dado o click no Frame devo ser redirecionado para página', ()=>{
-
-
+    context('Dado o click no Frame devo ser redirecionado para página', ()=>{
 
                 it('Então clico no link Nested Frame e valido o texto dos 4 frames presentes no hml', ()=>{
                      
@@ -34,9 +32,24 @@ describe(`Testar componentes do link Frame na url ${Cypress.config().baseUrl}`, 
                     })
 
 
-                    cy.get('frameset > frame:nth-child(1)').then( el=> {
-                        console.log(el)
-                    })
+                
+            
+                         
+                          cy.get('html > frameset > frame:nth-child(1)').then(el =>{
+                              
+                              const body = el.contents().find('/html/body')
+
+                             cy.wrap(body).then( el => {
+                                console.log(el)
+                             })
+                          })
+                        
+                        // cy.wrap(body).then( el => {console.log})
+
+                        // cy.wrap(body).then( b => {
+                        //     console.log(b)
+                        // })
+                
 
                                         
         })

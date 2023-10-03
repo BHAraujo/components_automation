@@ -22,7 +22,7 @@ describe(`Testar componentes do link Infinite Scroll na url ${Cypress.config().b
 
                         cy.get(infinite_scroll.div_dynamic.locator).then( el => {
 
-                            expect(el.length).equal(1)
+                            expect(el.length, 'Assert amount text').equal(1)
                         
                         })
                         
@@ -35,7 +35,7 @@ describe(`Testar componentes do link Infinite Scroll na url ${Cypress.config().b
                    
                         cy.get(infinite_scroll.div_dynamic.locator).then( el => {
                        
-                            expect(el.length).equal(7)
+                            expect(el.length, 'Assert amount text').equal(7)
                        
                         })
                 })

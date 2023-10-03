@@ -49,7 +49,7 @@ describe(`Testar componentes do link Hovers na url ${Cypress.config().baseUrl}`,
                                  
                                  cy.url().then( el => {
                     
-                                    expect(Cypress.config().baseUrl.concat(link.url.slice(1))).equal(el)
+                                    expect(Cypress.config().baseUrl.concat(link.url.slice(1)), 'Assert url').equal(el)
                 
                                 })
                             })
